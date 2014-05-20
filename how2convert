@@ -1,0 +1,7 @@
+steps for converting asciis to ssj asciis with regex:
+1. \\ into \\\\
+2. \' into \\\'
+3. \" into \\\"
+4. \n into \\n\" \\\n\t\t\t\t\"
+5. add \t\t\t\t\" at beginning
+6. turn last \\n\" \\\n\t\t\t\t\" into \"
