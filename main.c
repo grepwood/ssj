@@ -15,7 +15,7 @@ int main(int argc, char * argv[])
 	long int * character = NULL;
 	unsigned int total_characters = 2;
 	char * chosen_character = NULL;
-	if(argc == 2
+	if(argc > 1
 	&&	(!strcmp(argv[1],"-h")
 		|| !strcmp(argv[1],"--help"))) {
 		exit(help(argv[0]));
