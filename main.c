@@ -13,9 +13,9 @@ int main(int argc, char * argv[])
 {
 	unsigned int mugen = 0;
 	long int * character = NULL;
-	unsigned int total_characters = 2;
+	unsigned int total_characters = 3;
 	char * chosen_character = NULL;
-	if(argc > 1
+	if(argc == 2
 	&&	(!strcmp(argv[1],"-h")
 		|| !strcmp(argv[1],"--help"))) {
 		exit(help(argv[0]));
@@ -26,6 +26,7 @@ int main(int argc, char * argv[])
 /* Make sure to allocate EACH element of character array with a unique character from dbz.h */
 	character[0] = (long int)GOKU;
 	character[1] = (long int)GOHAN;
+	character[2] = (long int)VEGETA;
 /* Ok now we're done with what was meant to be in a function */
 	mugen = rand()%total_characters; /* Roll for a character */
 	chosen_character = (char *)character[mugen]; /* Copying character location */
