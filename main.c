@@ -4,9 +4,9 @@
 #include <string.h>
 #include "ssj-asciis.h"
 
-char help(char * exe)
+char help(char * exe, unsigned int chars)
 {
-	return printf("Usage: %s\n-h,--help for this message\nThis program is for people who mistype ssh. It prints DBZ characters. Have a nice day!\n",exe);
+	return printf("Usage: %s\n-h,--help for this message\nThis program is for people who mistype ssh. It prints DBZ characters.\nThis version knows %u asciis.\nHave a nice day!\n",exe,chars);
 }
 
 int main(int argc, char * argv[])
@@ -18,7 +18,7 @@ int main(int argc, char * argv[])
 	if(argc == 2
 	&&	(!strcmp(argv[1],"-h")
 		|| !strcmp(argv[1],"--help"))) {
-		exit(help(argv[0]));
+		exit(help(argv[0],total_characters));
 	} 
 	srand(time(NULL));
 /* I tried to write this as a function but this will have to do */
